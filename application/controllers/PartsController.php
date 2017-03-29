@@ -23,6 +23,8 @@ class PartsController extends Application
 	 */
 	public function index()
 	{
+
+	    // set page title and view
 		$this->data['pagetitle'] = 'Bot Factory - Parts';
 		$this->data['pagebody'] = 'Parts/parts_page';
 
@@ -72,6 +74,11 @@ class PartsController extends Application
 		$this->render();
 	}
 
+    /**
+     * @param $id the id we are using to allocate the item
+     * set data to the model
+     */
+
 	public function details($id)
 	{
 		$this->data['pagetitle'] = 'Bot Factory - Part details';
@@ -85,6 +92,7 @@ class PartsController extends Application
 		$this->data['manufacturer'] = $source['manufacturer'];
 		$this->data['built_date'] = $source['built_date'];
         $this->data['cost'] = $source['cost'];
+        $this->data['isAvailable'] = $source['isAvailable'];
 
 		$this->render();
 	}

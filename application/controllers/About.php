@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class AboutController extends Application
+class About extends Application
 {
     function __construct()
     {
@@ -21,6 +21,8 @@ class AboutController extends Application
 	 */
 	public function index()
 	{
+	    // set all the data parameters
+
 		$this->data['pagetitle'] = 'Bot Factory - About';
 
 		$this->data['pagebody'] = 'About/about';

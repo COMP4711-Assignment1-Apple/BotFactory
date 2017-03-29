@@ -1,20 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class RobotController extends Application
+class Robot extends Application
 {
     function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * the home page of robot page
+     */
     public function index(){
         $this->data['pagetitle'] = 'Bot Factory - Robots';
         $this->data['pagebody'] = 'Robot/robots';
 
     }
 
+    /**
+     * @param $which the id of the item that we are looking for
+     */
     public function details($which){
+
+        // set all the parameters the page needed
         $this->data['pagetitle'] = 'Bot Factory - Robot details';
         $this->data['pagebody'] = 'Robot/robots';
 
