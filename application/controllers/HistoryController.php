@@ -9,6 +9,7 @@ class HistoryController extends Application
     {
         parent::__construct();
     }
+
     /**
      * Index Page for this controller.
      *
@@ -36,7 +37,6 @@ class HistoryController extends Application
                 'customerName' => $record['customerName'],
                 'date' => $record['date'],
                 'category' => $record['category'],
-                'type' => $record['type'],
                 'price' => $record['price'],
                 'description' => $record['description'],
                 'partID' => $record['partID']

@@ -23,8 +23,7 @@ class Homepage extends Application
 	{
 
 	    //set page title and view
-		$this->data['pagetitle'] = 'Bot Factory - Homepage';
-
+		$this->data['pagetitle'] = 'BotFactory - Homepage';
 		$this->data['pagebody'] = 'homepage';
 
         // get all the parameters the dashboard need
@@ -33,6 +32,7 @@ class Homepage extends Application
 		$spent = $this->history->getSpent();
 		$earned = $this->history->getEarned();
 		$data = array('parts'=> $parts, 'robots' => $robots, 'spent' => $spent , 'earned' => $earned);
+        
         $this->data = array_merge($this->data, $data);
 
 		$this->render(); 

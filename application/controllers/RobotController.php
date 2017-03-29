@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Robot extends Application
+class RobotController extends Application
 {
     function __construct()
     {
@@ -23,7 +23,8 @@ class Robot extends Application
     public function details($which){
 
         // set all the parameters the page needed
-        $this->data['pagetitle'] = 'Bot Factory - Robot details';
+        $this->data['pagetitle'] = 'BotFactory - Robot details';
+
         $this->data['pagebody'] = 'Robot/robots';
 
         $source = $this->robots->get($which);

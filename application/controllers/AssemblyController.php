@@ -1,11 +1,7 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
-/**
- * Created by PhpStorm.
- * User: Siyuan
- * Date: 2017/2/10
- * Time: 23:42
- */
+
 class AssemblyController extends Application
 {
     function __construct()
@@ -18,8 +14,9 @@ class AssemblyController extends Application
      */
     public function index()
     {
-        //get all parts and robots
+        //get all parts
         $parts = $this->parts->all();
+        //get all robots
         $robots = $this->robots->all();
 
         //assembly the single parts tp a parser
@@ -33,7 +30,9 @@ class AssemblyController extends Application
             }
         }
 
+
         //use the parser to build a robot
+
         foreach ($robots as $robot){
             $cellsForRobots[] = $this->parser->parse('Assembly/_singleRobot', (array)$robot, true);
         }
@@ -51,20 +50,22 @@ class AssemblyController extends Application
         $this->table->set_caption('Top Part');
         $rows = $this->table->make_columns($top, 3);
         $this->data['tableTop'] = $this->table->generate($rows);
+
         $this->table->set_caption('Torso Part');
         $rows = $this->table->make_columns($torso, 3);
         $this->data['tableTorso'] = $this->table->generate($rows);
+
         $this->table->set_caption('Bottom Part');
         $rows = $this->table->make_columns($bottom, 3);
         $this->data['tableBottom'] = $this->table->generate($rows);
+
         $this->table->set_caption('Assembled Rotots');
         $rows = $this->table->make_columns($cellsForRobots, 3);
         $this->data['tableRobots'] = $this->table->generate($rows);
 
-        $this->data['pagetitle'] = 'Bot Factory - Assembly';
+        $this->data['pagetitle'] = 'BotFactory - Assembly';
 
         $this->data['pagebody'] = 'Assembly/assembly';
-
         $this->render();
     }
 }

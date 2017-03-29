@@ -1,8 +1,8 @@
 <?php
-class History extends CI_Model 
+class History extends CI_Model
 {
 
-	// transactionId | customerName | date | category | type | price | description | partId
+	// transactionId | customerName | date | category | price | description | partId
     // Primary Key "transactionId"
     // AutoIncrement "transactionId"
     //
@@ -13,8 +13,7 @@ class History extends CI_Model
 		array(
             'transactionID' => 1,
 			'customerName' => 'Dalton',
-			'category' => 'Assembly',
-			'type' => 'Part',
+			'category' => 'Recycling',
 			'price' => 20,
 			'description' => 'Did not like the product',
 			'date' => '02-08-2017 08:30',
@@ -156,7 +155,7 @@ class History extends CI_Model
 		$moneySpent = 0;
 		foreach ($this->data as $record) 
 		{
-			if ($record['category'] == 'Assembly')
+			if ($record['category'] == 'Consuming')
 			{
 				$moneySpent += $record['price'];
 			}
@@ -170,7 +169,7 @@ class History extends CI_Model
 		$moneyEarned = 0;
 		foreach ($this->data as $record) 
 		{
-			if ($record['category'] == 'Shipments') 
+			if ($record['category'] == 'Recycling')
 			{
 				$moneyEarned += $record['price'];
 			}
