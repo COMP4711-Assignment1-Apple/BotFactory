@@ -149,7 +149,12 @@ class PartController extends Application
 			$record = array('category' => 'Build', 'description' => 'Built ' . $size . ' parts');
 
 			// Update history table
+
+
+       $this->history->add($record);
+
 			//$this->history->add($record);
+
 		}
 
 		// return to original page
@@ -212,6 +217,11 @@ class PartController extends Application
 
 					// insert into database
 					$this->parts->add($p);
+          $record = array('category' => 'Buy Box', 'description' => 'Buy a Box ');
+
+                    // Update history table
+          $this->history->add($record);
+
 				}
 			}
 		}
