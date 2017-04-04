@@ -35,7 +35,8 @@ class Homepage extends Application
 		$robots = $this->robots->size();
 		$spent = $this->history->getSpent();
 		$earned = $this->history->getEarned();
-		$data = array('parts' => $parts, 'robots' => $robots, 'spent' => $spent , 'earned' => $earned);
+		$total = 2000 + $earned - $spent;
+		$data = array('parts' => $parts, 'robots' => $robots, 'spent' => $spent , 'earned' => $earned, 'total' => $total);
         
         $this->data = array_merge($this->data, $data);
 

@@ -34,9 +34,8 @@ class History extends MY_Model
 		$moneySpent = 0;
 		foreach ($this->all() as $record)
 		{
-			
-			$moneySpent += $record->amount;
-			
+			if ($record->amount < 0)
+				$moneySpent -= $record->amount;
 		}
 		return $moneySpent;
 	}
@@ -47,9 +46,8 @@ class History extends MY_Model
 		$moneyEarned = 0;
 		foreach ($this->all() as $record)
 		{
-			
-			$moneyEarned += $record->amount;
-			
+			if ($record->amount > 0)
+				$moneyEarned += $record->amount;
 		}
 		return $moneyEarned;
 	}
