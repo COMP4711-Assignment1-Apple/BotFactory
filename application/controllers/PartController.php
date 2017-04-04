@@ -189,15 +189,12 @@ class PartController extends Application
                     $p->line = "companion";
                 }
                 $p->isAvailable = 1;
-
                 // insert into database
                 $this->parts->add($p);
-                $record = array('category' => 'Buy Box', 'description' => 'Buy a Box ', 'amount' => -100);
-
-                // Update history table
-
-                $this->history->add($record);
             }
+            // Update history table
+            $record = array('category' => 'Buy Box', 'description' => 'Buy a Box ', 'amount' => -100);
+            $this->history->add($record);
         }
 
 

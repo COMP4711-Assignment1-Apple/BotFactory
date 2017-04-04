@@ -12,7 +12,7 @@
 	                                    <i class="fa fa-credit-card fa-5x"></i>
 	                                </div>
 	                                <div class="col-xs-9 text-right">
-	                                    <div class="huge">2000</div>
+	                                    <div class="huge">{total}</div>
 	                                    <div>Current money</div>
 	                                </div>
 	                            </div>
