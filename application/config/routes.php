@@ -49,13 +49,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'HomepageController';
-$route['home'] = "HomepageController/index";
-$route['parts'] = "PartsController/index";
-$route['parts/(:num)'] = 'PartsController/details/$1';
-$route['assembly'] = "AssemblyController/index";
+
+$route['default_controller'] = 'Homepage';
+$route['home'] = "Homepage";
+$route['parts/(:num)'] = 'PartController/details/$1';
 $route['robots/(:num)'] = 'RobotController/details/$1';
-$route['history'] = "HistoryController/index";
-$route['about'] = "AboutController/index";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['history'] = "HistoryController/index";
+$route['history/page/(:num)'] = "HistoryController/page/$1";
+$route['assembly'] = "AssemblyController/index";
+$route['parts'] = "PartController/index";
+$route['manage'] = "ManageController/index";
+$route['about'] = "AboutController/index";
+$route['register'] = "RegisterController/index";
