@@ -1,19 +1,18 @@
-#Change Log
+# Change Log
 
 Position | Name 
 --- | ---
-Team captain: | Arnold Myint
-Team member(s): 
- jasonlee97  | Jason Lee
- Arv91       | Arvin Rolos
- bcitdaltond | Dalton Danis
- wsyccc      | Wayne Wang
-
+Team Captain | Arnold Myint (arnoldmyint)
+Team Member   | Arvin Rolos ( Arv91)
+Team Member   | Jason Lee (jasonlee97)
+Team Member | Dalton Danis (bcitdaltond)
+Team Member  | Wayne Wang (wsyccc)
 
 Team conventions: Allman notation, markdown for changelog.  
 Changelog format: Bottom to top (New to old).
 
-<h2>Version: </h2>
+## Version(s):
+
 Version | Release Date | Description  | Editor
 --- | --- | --- | ---
 *v2.15* | Apr 04, 2017 | SQL Data Dump /data. | `arnoldmyint`
