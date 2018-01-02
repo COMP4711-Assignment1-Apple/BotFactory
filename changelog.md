@@ -1,4 +1,4 @@
-#Change Log
+# Change Log
 
 Position | Name 
 --- | ---
@@ -13,7 +13,7 @@ Team member(s):
 Team conventions: Allman notation, markdown for changelog.  
 Changelog format: Bottom to top (New to old).
 
-<h2>Version: </h2>
+
 Version | Release Date | Description  | Editor
 --- | --- | --- | ---
 *v2.15* | Apr 04, 2017 | SQL Data Dump /data. | `arnoldmyint`
